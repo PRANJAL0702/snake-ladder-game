@@ -1,0 +1,23 @@
+plugins {
+    id 'java'
+}
+
+group = 'org.game.snakeandladder'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    compileOnly "org.projectlombok:lombok:1.18.32"
+    annotationProcessor 'org.projectlombok:lombok:1.18.12'
+    // https://mvnrepository.com/artifact/org.apache.commons/commons-lang3
+    implementation group: 'org.apache.commons', name: 'commons-lang3', version: '3.10'
+}
+
+test {
+    useJUnitPlatform()
+}
